@@ -5,11 +5,11 @@ const list = document.getElementById("meetingList");
 form.onsubmit = async (e) => {
   e.preventDefault();
   const data = {
-    userId: userId.value,
-    title: title.value,
-    startTime: startTime.value,
-    endTime: endTime.value
-  };
+  userId: window.demoUserId,
+  title: title.value,
+  startTime: startTime.value,
+  endTime: endTime.value
+};
 
   const res = await fetch("/meetings", {
     method: "POST",

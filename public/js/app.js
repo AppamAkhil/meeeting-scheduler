@@ -7,8 +7,8 @@ form.onsubmit = async (e) => {
   const data = {
   userId: window.demoUserId,
   title: title.value,
-  startTime: startTime.value,
-  endTime: endTime.value
+  startTime: new Date(startTime.value).toISOString(),
+  endTime: new Date(endTime.value).toISOString()
 };
 
   const res = await fetch("/meetings", {

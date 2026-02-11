@@ -17,17 +17,7 @@ app.use("/meetings", meetingRoutes);
 
 const PORT = process.env.PORT || 3000;
 
-sequelize.authenticate()
-  .then(() => {
-    console.log("Database connected");
-    return sequelize.sync();
-  })
-  .then(() => {
-    app.listen(process.env.PORT || 3000, () =>
-      console.log(`Server running on port ${process.env.PORT || 3000}`)
-    );
-  })
-  .catch(err => {
-    console.error("Unable to connect to database:", err);
-  });
-
+sequelize.sync().then(() => {
+  const PORT = process.env.PORT || 3000;
+  app.listen(PORT, () => console.log("Server running on " + PORT));
+});

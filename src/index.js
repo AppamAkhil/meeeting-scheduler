@@ -18,5 +18,5 @@ app.use("/meetings", meetingRoutes);
 const PORT = process.env.PORT || 3000;
 
 sequelize.sync().then(() => {
-  app.listen(PORT, () => console.log("Server running on " + PORT));
+  app.listen(PORT, () => console.log(`Server running on ${PORT}`));
 });

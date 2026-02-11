@@ -1,0 +1,53 @@
+# Node modules
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory
+coverage/
+
+# Dependency directories
+jspm_packages/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# VS Code settings
+.vscode/
+
+# SQLite database (if used)
+*.sqlite
+*.sqlite3
+database.sqlite
+
+# Sequelize meta
+sequelize-meta.json
+
+# Build folders (if frontend added later)
+dist/
+build/
+
+# Temporary files
+tmp/
+temp/
+
+# Optional: lock files (keep if team project)
+# package-lock.json
+# yarn.lock
